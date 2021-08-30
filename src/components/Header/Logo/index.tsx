@@ -14,7 +14,7 @@ const Logo: React.FC = () => {
           title
         }
       }
-      placeholderImage: file(relativePath: { eq: "profile.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "profile2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 80) {
             ...GatsbyImageSharpFluid
@@ -26,13 +26,13 @@ const Logo: React.FC = () => {
 
   const logoTitle: string = site.siteMetadata.title;
   const logoImage: ImageSharpFluid = placeholderImage.childImageSharp.fluid;
-
+  console.log(logoImage);
   return (
     <Styled.Logo to="/">
       <Styled.Image>
         <Img fluid={logoImage} alt={logoTitle} />
       </Styled.Image>
-      <Styled.Text>{logoTitle}</Styled.Text>
+      <Styled.Text>Beaker Labs</Styled.Text>
     </Styled.Logo>
   );
 };

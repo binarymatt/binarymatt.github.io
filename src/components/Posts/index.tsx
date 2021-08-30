@@ -89,9 +89,7 @@ const Posts: React.FC = () => {
               <Link to={slug}>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
                   <Styled.Card>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
+                    <Styled.Image>{cover && <Img fluid={cover.childImageSharp.fluid} alt={title} />}</Styled.Image>
                     <Styled.Content>
                       <Styled.Date>{date}</Styled.Date>
                       <Styled.Title>{title}</Styled.Title>

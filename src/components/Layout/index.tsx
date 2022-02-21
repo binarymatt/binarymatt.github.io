@@ -28,21 +28,14 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <AnimatePresence exitBeforeEnter>
-        <Styled.Layout>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            {children}
 
-            <Footer />
-          </motion.div>
-        </Styled.Layout>
-      </AnimatePresence>
+      <Styled.Layout>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main className="flex-grow">
+          <main>{children}</main>
+        </main>
+        <Footer />
+      </Styled.Layout>
     </>
   );
 };

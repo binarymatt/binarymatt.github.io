@@ -14,6 +14,9 @@ interface Post {
   html: React.ReactNode;
   fields: {
     slug: string;
+    readingTime: {
+      text: string;
+    };
   };
   frontmatter: {
     title: string;
@@ -40,7 +43,11 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <Container section>
-        <TitleSection title={post.frontmatter.date} subtitle={post.frontmatter.title} />
+        <TitleSection
+          date={post.frontmatter.date}
+          title={post.frontmatter.title}
+          readingTime={post.fields.readingTime.text}
+        />
         <FormatHtml content={post.html} />
         <Styled.Links>
           <span>
@@ -69,6 +76,11 @@ export const query = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMM DD, YYYY")

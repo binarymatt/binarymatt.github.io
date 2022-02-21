@@ -29,9 +29,6 @@ const Logo: React.FC = () => {
   console.log(logoImage);
   return (
     <Styled.Logo to="/">
-      <Styled.Image>
-        <Img fluid={logoImage} alt={logoTitle} />
-      </Styled.Image>
       <Styled.Text>Beaker Labs</Styled.Text>
     </Styled.Logo>
   );

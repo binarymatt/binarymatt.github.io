@@ -1,7 +1,7 @@
 ---
 title: 'RPI Cluster - Part 1'
 date: 2023-02-13T20:00:29-07:00
-draft: true
+draft: false
 ---
 
 I’ve been thinking about building a home lab for quite some time.

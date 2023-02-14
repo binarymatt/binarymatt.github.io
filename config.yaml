@@ -1,0 +1,34 @@
+baseURL: http://indterminatestate.net/
+languageCode: en-us
+title: indeterminate state
+theme: papermod
+minify:
+  disableXML: true
+  minifyOutput: true
+params:
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  disableSpecial1stPost: true
+  enableEmoji: true
+  UseHugoToc: true
+  hideSummary: true
+
+  homeInfoParams:
+    Title: 'Hi there :wave:'
+    Content: I'm Matt, this is my place to write some longer form content.
+  socialIcons: # optional
+    - name: mastodon
+      url: https://hachyderm.io/@matt_g
+    - name: github
+      url: https://github.com/binarymatt
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
+    - identifier: archives
+      name: archives
+      url: /posts/
+      weight: 20

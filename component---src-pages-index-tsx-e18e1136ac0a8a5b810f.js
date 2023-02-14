@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{QeBL:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),l=n.n(t),r=n("VXBa"),u=n("6o60"),c=n("FJuR");a.default=function(){return l.a.createElement(r.a,null,l.a.createElement(u.a,{title:"Beaker Labs"}),l.a.createElement(c.a,null))}}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-e18e1136ac0a8a5b810f.js.map
